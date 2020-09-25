@@ -42,6 +42,7 @@ if __name__ == '__main__':
                 friend = BaseContact(fake.first_name(), fake.last_name(), fake.random_int(), fake.email())
                 cards.append({'name': friend.name, 'last name': friend.last_name, 'phone': friend.phone, 'email': friend.email})
                 print(friend.label_length)
+                friend.contact()
 
         elif card_type == 'business':
             for i in range(quantity):
@@ -50,15 +51,13 @@ if __name__ == '__main__':
                 cards.append({'name': friend.name, 'last name': friend.last_name, 'phone': friend.phone, 'email': friend.email,
                               'position': friend.position, 'company': friend.company, 'work phone': friend.work_phone})
                 print(friend.label_length)
+                friend.contact()
 
 
     s_cards = sorted(cards, key=lambda k: k['name'])
 
     create_contacts('business', 2)
     print(cards)
-    #print(cards)
-    #print(s_cards)
-    #print(friend)
 
 
 
