@@ -3,12 +3,12 @@ from faker import Faker
 cards = []
 
 
-class Card:
-    def __init__(self, name, last_name, position, email):
+class BaseContact:
+    def __init__(self, name, last_name, telephone, email):
         self.name = name
         self.last_name = last_name
         self.email = email
-        self.position = position
+        self.telephone = telephone
         self._name_len = len(name) + len(last_name)
 
     @property
